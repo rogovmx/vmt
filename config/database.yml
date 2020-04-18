@@ -1,0 +1,26 @@
+test:
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: db/test.sqlite3
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  host: 0.0.0.0
+  port: 5432
+  database: vmt_development
+  username: postgres
+  password: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  host: 0.0.0.0
+  port: 5432
+  database: vmt_production
+  username: postgres
+  password: postgres
+
