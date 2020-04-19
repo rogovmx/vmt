@@ -3,6 +3,8 @@ class Player < ApplicationRecord
   has_many :indicator_values
   has_many :indicators, through: :indicator_values
 
+  validates :name, presence: true
+
   # выбрать Top-5 игроков по конкретному показателю в конкретной команде и по всем командам в целом
   def self.top5_by_indicator(indicator, team = nil)
     if team
@@ -17,7 +19,7 @@ class Player < ApplicationRecord
   end
 
   # проверить выполнил ли игрок конкретный показатель хотя бы 1 раз за предыдущие 5 матчей команды
-  def check_indicator_completed?(indicator)
+  def check_indicator_completed(indicator)
     team
       .matches
       .limit(5)

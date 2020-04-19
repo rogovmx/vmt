@@ -19,11 +19,6 @@ class Match < ApplicationRecord
     indicator_values.create(player: player, indicator: indicator, val: true)
   end
 
-  # игрок выполнил такой-то показатель в матче?
-  def player_indicator_completed?(player, indicator)
-    indicator_values.find_by(player: player, indicator: indicator, val: true).present?
-  end
-
   private
 
   def check_team1_and_team2
