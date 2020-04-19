@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"Есть игроки, которые играют за команду, принимая участие в матчах.
+Есть показатели ("пробежал 10+ км", "сделал 70+ % точных передач" и так далее).
+Игроки в каждом матче какие-то показатели выполняют, а какие-то нет.
+
+Задание:
+Создать модели к данной предметной области.
+P.S. Полный набор атрибутов в моделях не принципиален, так что можно обойтись минимально достаточным.
+
+Реализовать методы, которые позволяют
+- отметить, что игрок выполнил такой-то показатель в матче
+- проверить выполнил ли игрок конкретный показатель хотя бы 1 раз за предыдущие 5 матчей команды
+- выбрать Top-5 игроков по конкретному показателю в конкретной команде и по всем командам в целом
+
+Требования к тестированию
+Код покрыть функциональными тестами (rspec).
+
+Код разместить на github.
+Создать в seeds набор данных (2 команды, 5 игроков в каждой, 2 показателя, 3 матча, несколько показателей для различных игроков)."
+
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.7
 
-* System dependencies
+* Database creation docker-compose
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+* Database initialization docker-compose
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
