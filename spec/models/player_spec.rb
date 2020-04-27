@@ -34,7 +34,7 @@ RSpec.describe Player, type: :model do
       end
 
       it do
-        top5 = Player.top5_by_indicator(indicator, team)
+        top5 = Player.top_by_indicator(indicator, team)
 
         top5.each do |player|
           expect(player.reload.check_indicator_completed(indicator)).to be_truthy
@@ -55,7 +55,7 @@ RSpec.describe Player, type: :model do
       end
 
       it do
-        top5 = Player.top5_by_indicator(indicator)
+        top5 = Player.top_by_indicator(indicator)
         # puts top5.to_yaml
 
         top5.each do |player|
@@ -68,7 +68,7 @@ RSpec.describe Player, type: :model do
       it do
         indicator =
           team2.indicator_values.first.indicator
-        top5 = Player.top5_by_indicator(indicator)
+        top5 = Player.top_by_indicator(indicator)
         # puts top5.to_yaml
         expect(top5[1].team).to_not eq top5[0].team
       end
